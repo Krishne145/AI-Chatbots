@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIVO | Emotion-Aware Robot Companion</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <section class="slide active" id="loginSlide">
+        <div class="panel login-panel">
+          <div class="robot-visor">
+            <div class="visor-eye"></div>
+            <div class="visor-eye"></div>
+          </div>
+          <h1>Welcome, I am KIVO</h1>
+          <p>Your futuristic robot companion with emotions, memory, and voice.</p>
+          <div class="login-card">
+            <input id="userName" type="text" placeholder="Enter your name" />
+            <button id="enterBtn">Activate KIVO</button>
+          </div>
+          <div class="share-link-box">
+            <span>Shareable link</span>
+            <a id="shareLink" href="#" target="_blank" rel="noopener">Loading link…</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="chatSlide">
+        <div class="robot-stage">
+          <div class="robot-controls">
+            <button id="flyBtn">Fly</button>
+            <button id="landBtn">Land</button>
+          </div>
+          <div class="robot">
+            <div class="head">
+              <div class="antenna"></div>
+              <div class="eye left"></div>
+              <div class="eye right"></div>
+              <div class="mouth"></div>
+            </div>
+            <div class="torso">
+              <div class="core"></div>
+            </div>
+            <div class="arm left"></div>
+            <div class="arm right"></div>
+            <div class="leg left"></div>
+            <div class="leg right"></div>
+          </div>
+        </div>
+
+        <div class="chat-panel">
+          <div class="chat-header">
+            <div class="avatar-badge">
+              <div class="avatar-core">
+                <div class="avatar-eye left"></div>
+                <div class="avatar-eye right"></div>
+                <div class="avatar-mouth"></div>
+              </div>
+            </div>
+            <div class="status-indicator"></div>
+            <div>
+              <h2>KIVO</h2>
+              <span id="moodLabel">Emotion-aware assistant</span>
+            </div>
+            <button id="exitBtn" class="exit-toggle" title="Exit KIVO">⏻</button>
+          </div>
+          <div class="chat-messages" id="chatMessages"></div>
+          <div class="input-row">
+            <input id="chatInput" type="text" placeholder="Say hello, ask a question, or ask KIVO to open something..." />
+            <button id="listenBtn" class="secondary">🎤</button>
+            <button id="sendBtn">Send</button>
+          </div>
+          <div class="voice-status" id="voiceStatus">Tap the mic and speak naturally.</div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
